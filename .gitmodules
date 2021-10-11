@@ -2,3 +2,6 @@
 	path = lufa
 	url = https://github.com/abcminiuser/lufa.git
 	ignore = dirty
+[submodule "SerialController/Commands/PythonCommands"]
+	path = SerialController/Commands/PythonCommands
+	url = git@github.com:ap0sec/pokecon-pythoncommands.git

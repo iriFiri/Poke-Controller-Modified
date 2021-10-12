@@ -47,10 +47,15 @@ class Sender:
                 self.ser = serial.Serial("COM" + str(portNum), 9600)
                 return True
             elif os.name == 'posix':
-                print('connecting to ' + "/dev/ttyUSB" + str(portNum))
-                self._logger.info('connecting to ' + "/dev/ttyUSB" + str(portNum))
-                self.ser = serial.Serial("/dev/ttyUSB" + str(portNum), 9600)
+                print('connecting to ' + "/dev/serial" + str(portNum))
+                self._logger.info('connecting to ' + "/dev/serial" + str(portNum))
+                self.ser = serial.Serial("/dev/serial" + str(portNum), 9600)
                 return True
+            # elif os.name == 'posix':
+            #     print('connecting to ' + "/dev/ttyUSB" + str(portNum))
+            #     self._logger.info('connecting to ' + "/dev/ttyUSB" + str(portNum))
+            #     self.ser = serial.Serial("/dev/ttyUSB" + str(portNum), 9600)
+            #     return True
             else:
                 print('Not supported OS')
                 self._logger.warning('Not supported OS')

@@ -271,6 +271,27 @@ class ImageProcPythonCommand(PythonCommand):
     except ModuleNotFoundError:
         pass
 
+    # 指定した画像が検出するまで、コールバック関数を実行するwrapper
+    # 性能上の問題でcv2.matchTemplate()に時間を要する場合に、意図した間隔で画像認識を実行するために使用
+    def waitContainTemplate(self, template_path, callback, *args, threshold=0.7, wait=0.5, use_gray=True, show_value=False):
+        loop_start = time.time()
+
+        while True:
+            tick_start = time.time()
+            if self.isContainTemplate(template_path, threshold, use_gray, show_value):
+                break
+            diff = time.time() - tick_start
+
+            if callback:
+                callback(*args)
+
+            if wait-diff > 0:
+                self.wait(wait-diff)
+            else:
+                print(f"skip wait (wait:{wait} < diff:{diff})")
+
+        return time.time() - loop_start
+
     # Get interframe difference binarized image
     # フレーム間差分により2値化された画像を取得
     def getInterframeDiff(self, frame1, frame2, frame3, threshold):

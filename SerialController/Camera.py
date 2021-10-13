@@ -65,6 +65,7 @@ class Camera:
         # self.camera.set(cv2.CAP_PROP_FPS, 60)
         self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, self.capture_size[0])
         self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, self.capture_size[1])
+        self.camera.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('H', '2', '6', '4'))
 
     # self.camera.set(cv2.CAP_PROP_SETTINGS, 0)
 
@@ -93,14 +94,14 @@ class Camera:
             image = self.image_bgr
         elif crop is 1 or crop is "1":
             image = self.image_bgr[
-                    crop_ax[1]:crop_ax[3],
-                    crop_ax[0]:crop_ax[2]
-                    ]
+                crop_ax[1]:crop_ax[3],
+                crop_ax[0]:crop_ax[2]
+            ]
         elif crop is 2 or crop is "2":
             image = self.image_bgr[
-                    crop_ax[1]:crop_ax[1] + crop_ax[3],
-                    crop_ax[0]:crop_ax[0] + crop_ax[2]
-                    ]
+                crop_ax[1]:crop_ax[1] + crop_ax[3],
+                crop_ax[0]:crop_ax[0] + crop_ax[2]
+            ]
         elif img is not None:
             image = img
         else:

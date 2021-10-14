@@ -273,22 +273,22 @@ class ImageProcPythonCommand(PythonCommand):
 
     # 指定した画像が検出するまで、コールバック関数を実行するwrapper
     # 性能上の問題でcv2.matchTemplate()に時間を要する場合に、意図した間隔で画像認識を実行するために使用
-    def waitContainTemplate(self, template_path, callback, *args, threshold=0.7, wait=0.5, use_gray=True, show_value=False):
+    def waitContainTemplate(self, template_path, callback, *args, interval=0.5, threshold=0.7, use_gray=True, show_value=False):
         loop_start = time.time()
 
         while True:
             tick_start = time.time()
             if self.isContainTemplate(template_path, threshold, use_gray, show_value):
                 break
-            diff = time.time() - tick_start
+            elapsed_time = time.time() - tick_start
 
             if callback:
                 callback(*args)
 
-            if wait-diff > 0:
-                self.wait(wait-diff)
+            if interval > elapsed_time:
+                self.wait(interval - elapsed_time)
             else:
-                print(f"skip wait (wait:{wait} < diff:{diff})")
+                print(f"skip wait {interval: {interval} < elapsed_time:{elapsed_time})")
 
         return time.time() - loop_start
 

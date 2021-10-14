@@ -288,7 +288,7 @@ class ImageProcPythonCommand(PythonCommand):
             if interval > elapsed_time:
                 self.wait(interval - elapsed_time)
             else:
-                print(f"skip wait {interval: {interval} < elapsed_time:{elapsed_time})")
+                print(f"skip wait (interval: {interval} < elapsed_time:{elapsed_time})")
 
         return time.time() - loop_start
 

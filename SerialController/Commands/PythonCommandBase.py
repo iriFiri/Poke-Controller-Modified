@@ -139,10 +139,7 @@ class PythonCommand(CommandBase.Command):
         self.press(Direction.DOWN, duration=2, wait=0.5)
 
         self.press(Button.A, wait=0.3)  # System Settings > System
-        self.press(Direction.DOWN)
-        self.press(Direction.DOWN)
-        self.press(Direction.DOWN)
-        self.press(Direction.DOWN, wait=0.3)
+        self.press(Direction.DOWN, duration=0.7, wait=0.2)
         self.press(Button.A, wait=0.2)  # Date and Time
         self.press(Direction.DOWN, duration=0.7, wait=0.2)
 

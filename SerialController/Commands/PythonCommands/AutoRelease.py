@@ -7,7 +7,7 @@ from Commands.PythonCommandBase import ImageProcPythonCommand
 
 # auto releasing pokemons
 class AutoRelease(ImageProcPythonCommand):
-    NAME = '自動リリース'
+    NAME = '自動リリースAutoRelease'
 
     def __init__(self, cam):
         super().__init__(cam)

@@ -83,7 +83,7 @@ class Fossil_shiny(ImageProcPythonCommand):
 
 
 class Fossil_shiny_00(Fossil_shiny):  # パッチラゴン
-    NAME = 'カセキ色厳選(パッチラゴン)'
+    NAME = 'カセキ色厳選(パッチラゴン)FossilShin'
 
     def __init__(self, cam):
         super().__init__(cam)

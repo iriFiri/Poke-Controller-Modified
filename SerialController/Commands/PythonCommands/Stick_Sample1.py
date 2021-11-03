@@ -7,7 +7,7 @@ from Commands.PythonCommandBase import PythonCommand
 
 # スティックの動作サンプルコード
 class StickSample1(PythonCommand):
-    NAME = 'スティック1'
+    NAME = 'スティック1 Stick Sam1'
 
     def __init__(self):
         super().__init__()

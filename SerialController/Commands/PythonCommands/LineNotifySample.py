@@ -7,7 +7,7 @@ from Commands.PythonCommandBase import ImageProcPythonCommand
 
 
 class LineSample(ImageProcPythonCommand):
-    NAME = 'LINE通知サンプル'
+    NAME = 'LINE通知サンプルLineNotifySample'
 
     def __init__(self, cam):
         super().__init__(cam)

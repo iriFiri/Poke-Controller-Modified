@@ -11,7 +11,7 @@ from Commands.PythonCommandBase import ImageProcPythonCommand
 # Infinity getting berries
 # 無限きのみ(ランクマッチ, 画像認識任意)
 class InfinityBerry(ImageProcPythonCommand):
-    NAME = '無限きのみ'
+    NAME = '無限きのみInfBerry'
 
     def __init__(self, cam):
         super().__init__(cam)

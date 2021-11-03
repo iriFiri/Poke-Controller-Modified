@@ -15,7 +15,7 @@ raid_pass_list = [[8], [2, 4], [1, 3, 5], [2, 6], [1, 5, 7], [2, 4, 6, 8], [3, 5
 
 
 class Move2(PythonCommand):
-    NAME = 'キーボード入力2'
+    NAME = 'キーボード入力2RaidPassword'
 
     def __init__(self):
         super().__init__()

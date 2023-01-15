@@ -1,5 +1,7 @@
 # Poke-Controller MODIFIED
 
+## This requires hardware to relay commands to the console as well as some way to capure the screen if you want more advanced functionality
+
 本質的な部分はそのままに、機能を一部追加します
 
 ![](https://github.com/Moi-Poke/Poke-Controller/blob/photo/photos/poke-con-modded.png)

@@ -45,7 +45,7 @@ serial_graph_list = [[],
 
 
 class InputKeyboard(PythonCommand):
-    NAME = 'シリアル入力'
+    NAME = 'シリアル入力InputSerial'
 
     def __init__(self):
         super().__init__()

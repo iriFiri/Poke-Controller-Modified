@@ -7,7 +7,7 @@ from Commands.PythonCommandBase import PythonCommand
 
 # スティックの動作サンプルコード
 class StickSample1(PythonCommand):
-    NAME = 'スティック1'
+    NAME = 'スティック1 Stick Sam1'
 
     def __init__(self):
         super().__init__()
@@ -44,7 +44,7 @@ class StickSample1(PythonCommand):
                 stickEnd()を行わないとスティックが入力されっぱなしになるので注意
                 '''
 
-                r = 0.5
+                r = .1
                 self.stick(Direction(Stick.LEFT, angle, r, showName=f'Angle={angle},r={r}'), duration=0.0, wait=0.0)
                 angle += 5
                 i += 1

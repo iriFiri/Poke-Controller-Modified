@@ -6,7 +6,7 @@ from Commands.PythonCommandBase import PythonCommand
 
 
 class InfinityFeather(PythonCommand):
-    NAME = '無限羽回収'
+    NAME = '無限羽回収InfFea'
 
     def __init__(self):
         super().__init__()

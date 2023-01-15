@@ -12,7 +12,7 @@ import numpy as np
 # Mash a button A
 # A連打
 class PlayRec(PythonCommand):
-    NAME = '記録したログを再生'
+    NAME = '記録したログを再生RecPlay'
 
     def __init__(self):
         super().__init__()

@@ -9,7 +9,7 @@ from logging import getLogger, DEBUG, NullHandler
 
 # ログ出力のサンプル
 class LoggingSample(ImageProcPythonCommand):
-    NAME = 'ログ出力のサンプル'
+    NAME = 'ログ出力のサンプルLogSamp'
 
     def __init__(self, cam):
         super().__init__(cam)

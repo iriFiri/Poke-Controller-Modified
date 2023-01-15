@@ -45,7 +45,7 @@ OpenCVの使用中(=映像キャプチャ中)は他の手段でキャプチャ�
 
 
 class ListenShiny(PythonCommand):
-    NAME = '色違いの音を聴きたい'
+    NAME = '色違いの音を聴きたいLisShiny'
 
     def __init__(self):
         super().__init__()

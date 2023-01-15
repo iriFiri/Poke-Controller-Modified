@@ -8,7 +8,7 @@ from Commands.PythonCommandBase import ImageProcPythonCommand
 # auto egg hatching using image recognition
 # 自動卵孵化(キャプボあり)
 class AutoHatching(ImageProcPythonCommand):
-    NAME = '自動卵孵化'
+    NAME = '自動卵孵化AutoHatch'
 
     def __init__(self, cam):
         super().__init__(cam)

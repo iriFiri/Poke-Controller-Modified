@@ -44,7 +44,7 @@ class StickSample1(PythonCommand):
                 stickEnd()を行わないとスティックが入力されっぱなしになるので注意
                 '''
 
-                r = 0.5
+                r = .1
                 self.stick(Direction(Stick.LEFT, angle, r, showName=f'Angle={angle},r={r}'), duration=0.0, wait=0.0)
                 angle += 5
                 i += 1

@@ -214,7 +214,7 @@ class ImageProcPythonCommand(PythonCommand):
         _, max_val, _, max_loc = cv2.minMaxLoc(res)
 
         if show_value:
-            print(template_path + ' ZNCC value: ' + str(max_val))
+            print(template_path + ' ZNCC value: ' + str(max_val) + str(max_loc))
 
         top_left = max_loc
         bottom_right = (top_left[0] + w + 1, top_left[1] + h + 1)
@@ -227,7 +227,7 @@ class ImageProcPythonCommand(PythonCommand):
                                  outline='blue',
                                  tag=tag,
                                  ms=ms)
-            return True
+            return max_loc #true
         else:
             if self.gui is not None and show_position and not show_only_true_rect:
                 # self.gui.delete("ImageRecRect")
